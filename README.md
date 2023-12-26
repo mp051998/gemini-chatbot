@@ -31,3 +31,8 @@ To run the app, use the following command:
   ```bash
   streamlit run app.py
   ```
+
+## Screenshots
+
+![image](https://github.com/mp051998/gemini-chatbot/assets/25613636/b9e12529-2642-4bf9-bcc5-8545cafa4a6f)
+
