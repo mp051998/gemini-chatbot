@@ -1,6 +1,6 @@
 # Gemini Chatbot
 
-This is a basic app which uses the Gemini Pro model to generate responses to user input.
+This is a basic app which uses the Gemini Pro API to generate responses to user input.
 
 ## Description
 
