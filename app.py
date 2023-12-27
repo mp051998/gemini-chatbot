@@ -30,13 +30,27 @@ with st.sidebar:
 
 # Get user input and generate response
 prompt = st.chat_input("Ask Gemini Pro a question...", key="user_input")
+
+# Show the welcome prompt
+with st.chat_message(SPEAKER_TYPES.BOT, avatar="🤖"):
+  st.write(initial_prompt['content'])
+
 if prompt:
   st.session_state['chat_history'].append({'role': SPEAKER_TYPES.USER, 'content': prompt})
-  response_text = chat_conversation.get_gemini_response(prompt, stream=False)
+  
+  # Display chat messages
+  for message in st.session_state.chat_history[1:]:
+    with st.chat_message(message["role"], avatar="👤" if message['role'] == SPEAKER_TYPES.USER else "🤖"):
+      st.write(message["content"])
+  
+  response_stream = chat_conversation.get_gemini_response(prompt, stream=True)
+  response_text = ''
+  with st.chat_message(SPEAKER_TYPES.BOT, avatar="🤖"):
+    placeholder = st.empty()
+    with st.spinner(text='Generating response...'):
+      for chunk in response_stream:
+        response_text += chunk.text
+        placeholder.markdown(response_text)
+      placeholder.markdown(response_text)
   st.session_state['chat_history'].append({'role': SPEAKER_TYPES.BOT, 'content': response_text})
-
-# Display or clear chat messages
-for message in st.session_state.chat_history:
-  with st.chat_message(message["role"], avatar="👤" if message['role'] == SPEAKER_TYPES.USER else "🤖"):
-    st.write(message["content"])
 
