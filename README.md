@@ -10,6 +10,7 @@ The Gemini Basic App is a simple chatbot which uses the Gemini Pro model.
 
 Ensure you are on Python 3.10+
 
+
 ## Installation
 
 1. Clone the repository:
@@ -24,6 +25,13 @@ Ensure you are on Python 3.10+
   pip install -r requirements.txt
   ```
 
+3. Create a .env file and add the following keys:
+
+  ```
+  GOOGLE_AI_API_KEY=<your-google-api-key>
+  ```
+
+
 ## Usage
 
 To run the app, use the following command:
@@ -31,6 +39,7 @@ To run the app, use the following command:
   ```bash
   streamlit run app.py
   ```
+
 
 ## Screenshots
 
