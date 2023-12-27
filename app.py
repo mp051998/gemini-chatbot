@@ -52,5 +52,6 @@ if prompt:
         response_text += chunk.text
         placeholder.markdown(response_text)
       placeholder.markdown(response_text)
+  
   st.session_state['chat_history'].append({'role': SPEAKER_TYPES.BOT, 'content': response_text})
 
