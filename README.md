@@ -1,10 +1,6 @@
 # Gemini Chatbot
 
-This is a basic app which uses the Gemini Pro model to generate responses to user input.
-
-## Description
-
-The Gemini Basic App is a simple chatbot which uses the Gemini Pro model.
+This is a basic app which uses the Gemini Pro API to generate responses to user input.
 
 ## Requirements
 
@@ -43,5 +39,6 @@ To run the app, use the following command:
 
 ## Screenshots
 
-![image](https://github.com/mp051998/gemini-chatbot/assets/25613636/b9e12529-2642-4bf9-bcc5-8545cafa4a6f)
+![image](https://github.com/mp051998/gemini-chatbot/assets/25613636/8787917a-233e-4daa-980b-e52064116788)
+
 
